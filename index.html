@@ -5,27 +5,35 @@
     <meta charset="UTF-8">
     <title>Advanced CSS - Assignment 1</title>
     <style>
-        a:visited {
+        a {
             color: green;
         }
-        a.link {
+        a[target] {
             color:red
         }
-    
-        p.two::after {
-            content: " -NEW";
+        #first-div p:first-of-type::after {
+            content:" -NEW ";
             color: yellow;
         }
-        p.three::after {
-            content: " -NEW";
+        #first-div p:nth-child(3)::after {
+            content:" -NEW ";
             color: yellow;
         }
-        p.ten:hover {
+        #second-div p:nth-child(2) {
+            color: red;
+        }
+        #second-div p:nth-last-of-type(4) {
+            color:blue;
+        }
+        #second-div p:nth-child(4) {
+            color:rgb(255, 0, 0);
+        }
+        p:last-child:hover {
             font-style: italic;
-            
         }
-        
-</style>
+
+
+    </style>
 </head>
 
 <body>
@@ -33,22 +41,22 @@
     <p>Paragraph 1</p>
     <a href="https://www.google.com/">Google</a>
     <a href="https://www.google.com/doodles">Google Doodles</a>
-    <a class="link" href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
+    <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
     <div id="first-div">
         <h2>Subheading</h2>
-        <p class="two">Paragraph 2</p>
-        <p class="three">Paragraph 3</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
         <div id="second-div">
             <h3>Sub subheading</h3>
-            <p style="color: red;">Paragraph 4</p>
-            <p style="color: blue;">Paragraph 5</p>
-            <p style="color:red;">Paragraph 6</p>
+            <p>Paragraph 4</p>
+            <p>Paragraph 5</p>
+            <p>Paragraph 6</p>
             <p>Paragraph 7</p>
             <p>Paragraph 8</p>
         </div>
     </div>
     <p>Paragraph 9</p>
-    <p class="ten">Paragraph 10</p>
+    <p>Paragraph 10</p>
 </body>
 
 </html>
